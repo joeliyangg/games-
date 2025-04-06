@@ -8,8 +8,23 @@ body {
     height: 100vh;
     background-color: #f0f0f0;
 }
+
 iframe {
     border: none;
     width: 80%;
     height: 80%;
+}
+
+/* 添加移动设备方向控制 */
+@media screen and (orientation: portrait) {
+    html {
+        transform: rotate(-90deg);
+        transform-origin: left top;
+        width: 100vh;
+        height: 100vw;
+        overflow-x: hidden;
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
 }
